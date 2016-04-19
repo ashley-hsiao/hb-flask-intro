@@ -23,7 +23,7 @@ def start_here():
         <title>Home Page</title>
       </head>
       <body>
-        <h1>Hi, click <a href="/hello">here!</a></h1>
+        <h1>Hi, you deserve <a href="/hello">a compliment!</a></h1>
       </body>
     </html>
     """
@@ -44,7 +44,7 @@ def say_hello():
         <form action="/greet">
           <label>What's your name? <input type="text" name="person"></label>
           <label>Choose your compliment:</label>
-          <select name="AWESOMENESS"> 
+          <select name="compliments"> 
             <option value="coolio">Coolio</option>
             <option value="neato">Neato</option>
             <option value="smashing">Smashing</option>
@@ -62,8 +62,8 @@ def greet_person():
 
     player = request.args.get("person")
 
-    compliment = request.args.get("AWESOMENESS")
-
+    compliment = request.args.get("compliments")
+    
     return """
     <!doctype html>
     <html>
@@ -81,3 +81,4 @@ if __name__ == '__main__':
     # debug=True gives us error messages in the browser and also "reloads"
     # our web app if we change the code.
     app.run(debug=True)
+
