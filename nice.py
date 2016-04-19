@@ -43,6 +43,12 @@ def say_hello():
         <h1>Hi There!</h1>
         <form action="/greet">
           <label>What's your name? <input type="text" name="person"></label>
+          <label>Choose your compliment:</label>
+          <select name="AWESOMENESS"> 
+            <option value="coolio">Coolio</option>
+            <option value="neato">Neato</option>
+            <option value="smashing">Smashing</option>
+          </select>    
           <input type="submit">
         </form>
       </body>
